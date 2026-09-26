@@ -1,0 +1,2545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eya Beauty | Beauté • Élégance • Confiance</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fff7fb;
+  color:#4a303b;
+  line-height:1.6;
+}
+
+button,input,select,textarea{font-family:inherit}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #f4d2e1;
+  box-shadow:0 3px 18px rgba(190,70,120,.10);
+}
+
+.navbar{
+  max-width:1250px;
+  margin:auto;
+  min-height:78px;
+  padding:12px 25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  font-family:Georgia,serif;
+  font-size:30px;
+  font-weight:bold;
+  background:linear-gradient(90deg,#a92f61,#e978a6,#c64278);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  white-space:nowrap;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:25px;
+  list-style:none;
+  font-size:14px;
+  font-weight:bold;
+}
+
+.nav-links a{transition:.3s}
+.nav-links a:hover{color:#d04c83}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.icon-btn{
+  border:none;
+  background:#fff0f7;
+  color:#c33f76;
+  width:43px;
+  height:43px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:18px;
+  position:relative;
+  transition:.3s;
+}
+
+.icon-btn:hover{
+  background:#f8cddd;
+  transform:translateY(-2px);
+}
+
+.cart-count{
+  position:absolute;
+  top:-4px;
+  right:-4px;
+  width:20px;
+  height:20px;
+  background:#d24b83;
+  color:white;
+  border-radius:50%;
+  font-size:11px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+}
+
+/* HERO */
+.hero{
+  min-height:680px;
+  padding:70px 25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(244,164,197,.45),transparent 35%),
+    radial-gradient(circle at 85% 25%,rgba(226,116,160,.22),transparent 35%),
+    linear-gradient(135deg,#fff0f7,#fff 48%,#fde3ef);
+}
+
+.hero-content{
+  max-width:1000px;
+}
+
+.hero-small{
+  color:#bd3d70;
+  font-size:14px;
+  font-weight:bold;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(65px,11vw,150px);
+  line-height:.95;
+  font-weight:700;
+  background:linear-gradient(
+    90deg,
+    #9e2d5d,
+    #d94f86 25%,
+    #f09abc 50%,
+    #cf477d 75%,
+    #922751
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  letter-spacing:-3px;
+  margin-bottom:25px;
+  filter:drop-shadow(0 8px 18px rgba(190,55,105,.18));
+}
+
+.hero h2{
+  font-family:Georgia,serif;
+  font-size:clamp(25px,4vw,45px);
+  color:#54323f;
+  margin-bottom:18px;
+}
+
+.hero p{
+  max-width:650px;
+  margin:auto;
+  font-size:17px;
+  color:#765763;
+}
+
+.hero-buttons{
+  margin-top:35px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+.btn{
+  border:none;
+  border-radius:30px;
+  padding:14px 28px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:.3s;
+  display:inline-block;
+}
+
+.btn-primary{
+  background:linear-gradient(135deg,#b83369,#dc6295);
+  color:white;
+  box-shadow:0 10px 25px rgba(200,65,125,.25);
+}
+
+.btn-primary:hover{
+  background:linear-gradient(135deg,#9b2859,#ca467c);
+  transform:translateY(-3px);
+}
+
+.btn-secondary{
+  background:white;
+  color:#bd3f73;
+  border:1px solid #edb8ce;
+}
+
+.btn-secondary:hover{
+  background:#fff0f7;
+  transform:translateY(-3px);
+}
+
+/* SECTIONS */
+section{padding:90px 25px}
+
+.section-header{
+  max-width:750px;
+  margin:0 auto 45px;
+  text-align:center;
+}
+
+.section-label{
+  color:#ce4a80;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.section-title{
+  font-family:Georgia,serif;
+  font-size:clamp(32px,5vw,50px);
+  background:linear-gradient(90deg,#a82e60,#df6597,#a82e60);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:12px;
+}
+
+.section-text{color:#795d69}
+
+/* FEATURES */
+.features{
+  background:white;
+  padding:35px 25px;
+}
+
+.feature-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.feature{
+  text-align:center;
+  padding:18px;
+}
+
+.feature-icon{
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.feature h3{
+  font-size:16px;
+  margin-bottom:5px;
+}
+
+.feature p{
+  font-size:13px;
+  color:#806a75;
+}
+
+/* CATEGORIES */
+#categories{background:#fff7fb}
+
+.category-grid{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+
+.category-card{
+  height:230px;
+  border-radius:24px;
+  overflow:hidden;
+  position:relative;
+  cursor:pointer;
+  box-shadow:0 15px 40px rgba(166,58,101,.14);
+}
+
+.category-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.category-card:hover img{transform:scale(1.08)}
+
+.category-overlay{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:flex-end;
+  padding:22px;
+  background:linear-gradient(transparent,rgba(75,25,47,.68));
+  color:white;
+}
+
+.category-overlay h3{
+  font-family:Georgia,serif;
+  font-size:25px;
+}
+
+/* SHOP */
+.shop-tools{
+  max-width:1150px;
+  margin:0 auto 35px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.search-box{
+  flex:1;
+  min-width:230px;
+  position:relative;
+}
+
+.search-box input{
+  width:100%;
+  padding:15px 20px;
+  border:1px solid #ecc2d5;
+  border-radius:30px;
+  outline:none;
+  background:white;
+}
+
+.search-box input:focus{
+  border-color:#d04d82;
+  box-shadow:0 0 0 4px rgba(208,77,130,.08);
+}
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.filter-btn{
+  border:1px solid #edc0d3;
+  background:white;
+  color:#81556a;
+  padding:10px 17px;
+  border-radius:25px;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+  background:#d04d82;
+  color:white;
+  border-color:#d04d82;
+}
+
+/* PRODUCTS */
+#produits{background:white}
+
+.product-grid{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+
+.product-card{
+  background:linear-gradient(145deg,#fff,#fff7fb);
+  border:1px solid #f0d7e2;
+  border-radius:22px;
+  overflow:hidden;
+  position:relative;
+  transition:.35s;
+}
+
+.product-card:hover{
+  transform:translateY(-8px);
+  border-color:#e5a1bc;
+  box-shadow:0 20px 45px rgba(174,65,105,.16);
+}
+
+.product-image{
+  height:285px;
+  overflow:hidden;
+  position:relative;
+  background:#fff0f7;
+}
+
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.product-card:hover .product-image img{
+  transform:scale(1.06);
+}
+
+.favorite-btn{
+  position:absolute;
+  top:13px;
+  right:13px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:none;
+  background:rgba(255,255,255,.9);
+  cursor:pointer;
+  font-size:18px;
+  color:#c34a7a;
+  z-index:2;
+}
+
+.favorite-btn.active{
+  background:#d04d82;
+  color:white;
+}
+
+.badge{
+  position:absolute;
+  top:14px;
+  left:14px;
+  background:#d04d82;
+  color:white;
+  font-size:11px;
+  font-weight:bold;
+  padding:6px 10px;
+  border-radius:20px;
+  z-index:2;
+}
+
+.badge.new{background:#b77c98}
+
+.product-info{padding:20px}
+
+.product-category{
+  color:#c0527e;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+  font-size:10px;
+  font-weight:bold;
+}
+
+.product-name{
+  font-family:Georgia,serif;
+  font-size:22px;
+  margin:6px 0;
+  color:#432d38;
+}
+
+.product-description{
+  color:#806b75;
+  font-size:13px;
+  min-height:42px;
+}
+
+.rating{
+  margin:12px 0;
+  font-size:13px;
+  color:#d78c20;
+}
+
+.product-bottom{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+
+.price{
+  color:#c03e73;
+  font-weight:bold;
+  font-size:18px;
+}
+
+.add-btn{
+  border:none;
+  background:#d04d82;
+  color:white;
+  padding:10px 15px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.add-btn:hover{
+  background:#a92f61;
+  transform:translateY(-2px);
+}
+
+/* PROMOTION */
+.promo-banner{
+  max-width:1150px;
+  margin:auto;
+  border-radius:30px;
+  padding:50px 30px;
+  text-align:center;
+  color:white;
+  background:
+    radial-gradient(circle at top right,#ee91b4,transparent 35%),
+    linear-gradient(135deg,#922c58,#ca4d82,#e47ca7);
+  box-shadow:0 20px 50px rgba(164,48,91,.20);
+}
+
+.promo-banner h2{
+  font-family:Georgia,serif;
+  font-size:40px;
+  margin-bottom:10px;
+}
+
+.promo-code{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-top:20px;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.35);
+  padding:10px 15px;
+  border-radius:25px;
+}
+
+.promo-code button{
+  border:none;
+  background:white;
+  color:#b6386d;
+  padding:7px 12px;
+  border-radius:18px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin-top:25px;
+  flex-wrap:wrap;
+}
+
+.count-box{
+  min-width:70px;
+  padding:10px;
+  background:rgba(255,255,255,.14);
+  border-radius:15px;
+}
+
+.count-box strong{
+  display:block;
+  font-size:23px;
+}
+
+/* NEW */
+.new-grid{
+  max-width:1150px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+/* DELIVERY / PAYMENT */
+.delivery-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.delivery-card{
+  background:white;
+  border:1px solid #f1dbe5;
+  padding:30px;
+  text-align:center;
+  border-radius:22px;
+  box-shadow:0 10px 30px rgba(160,60,100,.06);
+}
+
+.delivery-card .icon{
+  font-size:35px;
+  margin-bottom:12px;
+}
+
+.delivery-card h3{
+  color:#a93264;
+  margin-bottom:8px;
+}
+
+/* REVIEWS */
+#avis{
+  background:#fff0f7;
+}
+
+.reviews-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.review-card{
+  background:white;
+  padding:28px;
+  border-radius:22px;
+  border:1px solid #f0d5e2;
+}
+
+.review-stars{
+  color:#d78c20;
+  margin-bottom:12px;
+}
+
+.review-card p{
+  color:#705b66;
+  font-size:14px;
+}
+
+.review-name{
+  margin-top:15px;
+  color:#b2396b;
+  font-weight:bold;
+}
+
+/* ABOUT */
+.about-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.about-image img{
+  width:100%;
+  height:480px;
+  object-fit:cover;
+  border-radius:28px;
+  box-shadow:0 18px 45px rgba(170,55,100,.15);
+}
+
+.about-content h2{
+  font-family:Georgia,serif;
+  font-size:42px;
+  color:#a83263;
+  margin:8px 0 20px;
+}
+
+.about-content p{
+  color:#715b66;
+  margin-bottom:15px;
+}
+
+.about-list{
+  list-style:none;
+  margin-top:20px;
+}
+
+.about-list li{
+  padding:8px 0;
+  color:#694b59;
+}
+
+/* CONTACT */
+.contact-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:30px;
+}
+
+.contact-info{
+  background:linear-gradient(145deg,#fff0f7,#ffe5f0);
+  padding:35px;
+  border-radius:25px;
+}
+
+.contact-info h3{
+  font-family:Georgia,serif;
+  font-size:30px;
+  color:#a83263;
+  margin-bottom:25px;
+}
+
+.contact-item{
+  margin:18px 0;
+  color:#694b59;
+}
+
+.contact-form{
+  background:white;
+  padding:30px;
+  border-radius:25px;
+  border:1px solid #f0dbe5;
+  box-shadow:0 10px 30px rgba(170,55,100,.07);
+}
+
+.form-group{
+  margin-bottom:18px;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:7px;
+  font-weight:bold;
+  color:#553541;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+  width:100%;
+  padding:13px 15px;
+  border:1px solid #e8c8d7;
+  border-radius:13px;
+  outline:none;
+  background:#fffafd;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+  border-color:#d04d82;
+}
+
+.form-group textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+/* FOOTER */
+footer{
+  background:linear-gradient(135deg,#351f29,#642d47,#351f29);
+  color:white;
+  text-align:center;
+  padding:50px 20px;
+}
+
+.footer-logo{
+  font-family:Georgia,serif;
+  font-size:34px;
+  color:#f29abc;
+  margin-bottom:8px;
+}
+
+.footer-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:20px;
+  margin:25px 0;
+}
+
+.footer-links a{
+  color:#f8d7e5;
+  transition:.3s;
+}
+
+.footer-links a:hover{color:#fff}
+
+.copyright{
+  color:#d9aebe;
+  font-size:13px;
+}
+
+/* CART */
+.cart-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(45,20,32,.45);
+  z-index:1999;
+  display:none;
+}
+
+.cart-overlay.active{display:block}
+
+.cart-panel{
+  position:fixed;
+  top:0;
+  right:-430px;
+  width:min(430px,100%);
+  height:100vh;
+  background:white;
+  z-index:2000;
+  transition:.35s;
+  box-shadow:-15px 0 40px rgba(100,35,60,.15);
+  display:flex;
+  flex-direction:column;
+}
+
+.cart-panel.active{right:0}
+
+.cart-header{
+  padding:22px;
+  border-bottom:1px solid #f0dce5;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.cart-header h2{
+  font-family:Georgia,serif;
+  color:#a83263;
+}
+
+.close-btn{
+  border:none;
+  background:#fff0f7;
+  color:#b43b6d;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.cart-items{
+  flex:1;
+  overflow-y:auto;
+  padding:20px;
+}
+
+.cart-empty{
+  text-align:center;
+  padding:60px 20px;
+  color:#795d69;
+}
+
+.cart-empty div{
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+.cart-item{
+  display:grid;
+  grid-template-columns:65px 1fr 35px;
+  gap:12px;
+  align-items:center;
+  padding:14px 0;
+  border-bottom:1px solid #f2e0e8;
+}
+
+.cart-item img{
+  width:65px;
+  height:65px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.cart-item-info h4{
+  color:#4c303b;
+  margin-bottom:4px;
+}
+
+.cart-item-price{
+  color:#c13e73;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.quantity-controls{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin-top:7px;
+}
+
+.quantity-controls button{
+  width:26px;
+  height:26px;
+  border:none;
+  background:#fff0f7;
+  color:#b43b6d;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.remove-item{
+  border:none;
+  background:none;
+  cursor:pointer;
+  font-size:17px;
+}
+
+.cart-footer{
+  padding:20px;
+  border-top:1px solid #f0dce5;
+}
+
+.cart-promo{
+  display:flex;
+  gap:8px;
+  margin-bottom:8px;
+}
+
+.cart-promo input{
+  flex:1;
+  padding:10px 13px;
+  border:1px solid #e8c8d7;
+  border-radius:20px;
+  outline:none;
+}
+
+.cart-promo button{
+  border:none;
+  background:#fff0f7;
+  color:#ad3d6b;
+  border-radius:20px;
+  padding:10px 13px;
+  cursor:pointer;
+}
+
+.promo-message{
+  font-size:12px;
+  margin-bottom:10px;
+  color:#8b6170;
+}
+
+.cart-total{
+  display:flex;
+  justify-content:space-between;
+  font-size:18px;
+  font-weight:bold;
+  margin:15px 0;
+  color:#4b303b;
+}
+
+.checkout-btn{
+  width:100%;
+  border:none;
+  background:linear-gradient(135deg,#b83369,#dc6295);
+  color:white;
+  padding:15px;
+  border-radius:25px;
+  cursor:pointer;
+  font-weight:bold;
+  font-size:15px;
+}
+
+/* MODALS */
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(34,20,27,.6);
+  z-index:3000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.modal.active{display:flex}
+
+.modal-box{
+  background:white;
+  width:min(850px,100%);
+  max-height:92vh;
+  overflow-y:auto;
+  border-radius:28px;
+  position:relative;
+  padding:30px;
+}
+
+.modal-close{
+  position:absolute;
+  top:15px;
+  right:15px;
+  border:none;
+  background:#fff0f7;
+  color:#aa3d6a;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  cursor:pointer;
+  z-index:2;
+}
+
+.product-detail{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:35px;
+  align-items:center;
+}
+
+.detail-main-image{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:22px;
+}
+
+.detail-content h2{
+  font-family:Georgia,serif;
+  font-size:38px;
+  margin:8px 0;
+  color:#a83263;
+}
+
+.detail-content p{
+  color:#705c65;
+  margin:15px 0;
+}
+
+.detail-price{
+  font-size:28px;
+  color:#bd4275;
+  font-weight:bold;
+  margin:15px 0;
+}
+
+.detail-thumbnails{
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+}
+
+.detail-thumbnails img{
+  width:65px;
+  height:65px;
+  object-fit:cover;
+  border-radius:10px;
+  cursor:pointer;
+  border:2px solid transparent;
+}
+
+.detail-thumbnails img:hover{border-color:#d04d82}
+
+.detail-quantity{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:20px 0;
+}
+
+.detail-quantity button{
+  width:35px;
+  height:35px;
+  border:none;
+  background:#fff0f7;
+  color:#aa3d6a;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.detail-quantity span{
+  font-weight:bold;
+  min-width:20px;
+  text-align:center;
+}
+
+.order-form h2{
+  font-family:Georgia,serif;
+  margin-bottom:20px;
+  color:#a83263;
+}
+
+.order-summary{
+  background:#fff3f8;
+  padding:18px;
+  border-radius:15px;
+  margin-bottom:20px;
+}
+
+.order-summary p{
+  margin:5px 0;
+  font-size:14px;
+}
+
+/* TOAST */
+.toast{
+  position:fixed;
+  bottom:25px;
+  left:50%;
+  transform:translate(-50%,100px);
+  background:#3e2933;
+  color:white;
+  padding:13px 22px;
+  border-radius:30px;
+  z-index:5000;
+  opacity:0;
+  transition:.35s;
+  font-size:14px;
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+  opacity:1;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#25d366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+  z-index:1000;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+/* MOBILE */
+.mobile-menu{
+  display:none;
+  border:none;
+  background:#fff0f7;
+  color:#b43f70;
+  width:43px;
+  height:43px;
+  border-radius:50%;
+  font-size:20px;
+  cursor:pointer;
+}
+
+@media(max-width:1000px){
+  .nav-links{gap:14px}
+  .product-grid{grid-template-columns:repeat(3,1fr)}
+  .category-grid{grid-template-columns:repeat(2,1fr)}
+  .feature-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:760px){
+  .navbar{padding:12px 18px}
+  .mobile-menu{display:block}
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:78px;
+    left:0;
+    right:0;
+    background:white;
+    flex-direction:column;
+    padding:20px;
+    border-bottom:1px solid #f1dce5;
+    box-shadow:0 12px 20px rgba(70,30,45,.08);
+  }
+
+  .nav-links.active{display:flex}
+  .nav-actions{margin-left:auto}
+  .logo{font-size:25px}
+  .hero{min-height:600px}
+  .hero h1{font-size:70px}
+  section{padding:65px 18px}
+
+  .category-grid,
+  .product-grid,
+  .new-grid,
+  .reviews-grid,
+  .delivery-grid,
+  .about-grid,
+  .contact-grid,
+  .product-detail{
+    grid-template-columns:1fr;
+  }
+
+  .product-grid{gap:18px}
+  .product-image{height:330px}
+  .about-image img{height:350px}
+  .promo-banner{padding:35px 20px}
+  .promo-banner h2{font-size:30px}
+  .modal-box{padding:22px}
+  .detail-main-image{height:320px}
+
+  .shop-tools{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .filters{justify-content:center}
+}
+
+@media(max-width:480px){
+  .hero h1{font-size:58px}
+  .hero h2{font-size:26px}
+  .hero p{font-size:14px}
+  .hero-buttons .btn{width:100%}
+  .category-grid{grid-template-columns:1fr}
+  .feature-grid{grid-template-columns:1fr 1fr}
+  .feature{padding:10px}
+  .product-image{height:300px}
+
+  .product-bottom{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .add-btn{width:100%}
+  .promo-banner h2{font-size:27px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <a href="#accueil" class="logo">Eya Beauty</a>
+
+    <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#accueil" onclick="closeMobileMenu()">Accueil</a>
+      <a href="#nouveautes" onclick="closeMobileMenu()">Nouveautés</a>
+      <a href="#produits" onclick="closeMobileMenu()">Produits</a>
+      <a href="#categories" onclick="closeMobileMenu()">Catégories</a>
+      <a href="#apropos" onclick="closeMobileMenu()">À propos</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    </div>
+
+    <div class="nav-actions">
+      <button class="icon-btn" onclick="showFavorites()">♡</button>
+      <button class="icon-btn" onclick="openCart()">
+        🛍️
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="accueil">
+  <div class="hero-content">
+    <div class="hero-small">Votre beauté, votre univers</div>
+
+    <h1>Eya Beauty</h1>
+
+    <h2>Beauté • Élégance • Confiance</h2>
+
+    <p>
+      Découvrez un univers beauté pensé pour révéler votre élégance
+      et vous offrir une expérience shopping unique.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#produits" class="btn btn-primary">Découvrir nos produits</a>
+      <a href="#apropos" class="btn btn-secondary">Découvrir Eya Beauty</a>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="feature-grid">
+
+    <div class="feature">
+      <div class="feature-icon">💗</div>
+      <h3>Produits sélectionnés</h3>
+      <p>Des produits choisis avec attention.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">🚚</div>
+      <h3>Livraison</h3>
+      <p>Livraison partout en Tunisie.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">💬</div>
+      <h3>Service client</h3>
+      <p>Nous sommes là pour vous accompagner.</p>
+    </div>
+
+    <div class="feature">
+      <div class="feature-icon">🔒</div>
+      <h3>Achat sécurisé</h3>
+      <p>Une expérience simple et sécurisée.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="categories">
+
+  <div class="section-header">
+    <div class="section-label">Nos univers</div>
+    <h2 class="section-title">Catégories</h2>
+    <p class="section-text">
+      Explorez nos différentes catégories beauté.
+    </p>
+  </div>
+
+  <div class="category-grid">
+
+    <div class="category-card" onclick="filterProducts('Maquillage')">
+      <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=85">
+      <div class="category-overlay">
+        <h3>Maquillage</h3>
+      </div>
+    </div>
+
+    <div class="category-card" onclick="filterProducts('Soins')">
+      <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=85">
+      <div class="category-overlay">
+        <h3>Soins</h3>
+      </div>
+    </div>
+
+    <div class="category-card" onclick="filterProducts('Parfums')">
+      <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=85">
+      <div class="category-overlay">
+        <h3>Parfums</h3>
+      </div>
+    </div>
+
+    <div class="category-card" onclick="filterProducts('Coffrets')">
+      <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=800&q=85">
+      <div class="category-overlay">
+        <h3>Coffrets</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="produits">
+
+  <div class="section-header">
+    <div class="section-label">Shopping</div>
+    <h2 class="section-title">Nos produits</h2>
+    <p class="section-text">
+      Découvrez notre sélection beauté.
+    </p>
+  </div>
+
+  <div class="shop-tools">
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Rechercher un produit..."
+        oninput="searchProducts()"
+      >
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterProducts('Tous',this)">Tous</button>
+      <button class="filter-btn" onclick="filterProducts('Maquillage',this)">Maquillage</button>
+      <button class="filter-btn" onclick="filterProducts('Soins',this)">Soins</button>
+      <button class="filter-btn" onclick="filterProducts('Parfums',this)">Parfums</button>
+      <button class="filter-btn" onclick="filterProducts('Coffrets',this)">Coffrets</button>
+    </div>
+
+  </div>
+
+  <div class="product-grid">
+
+    <div class="product-card" data-name="Gloss Eya Beauty" data-category="Maquillage">
+      <div class="product-image">
+        <span class="badge">BEST SELLER</span>
+        <button class="favorite-btn" onclick="toggleFavorite(this,'Gloss Eya Beauty')">♡</button>
+        <img src="https://images.unsplash.com/photo-1631214524020-7e18db9e2f5d?auto=format&fit=crop&w=700&q=85">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Maquillage</div>
+        <div class="product-name">Gloss Eya Beauty</div>
+        <div class="product-description">Gloss rose brillant</div>
+        <div class="rating">★★★★★</div>
+        <div class="product-bottom">
+          <div class="price">25 DT</div>
+          <button class="add-btn" onclick="addToCart('Gloss Eya Beauty',25,'https://images.unsplash.com/photo-1631214524020-7e18db9e2f5d?auto=format&fit=crop&w=700&q=85')">Ajouter</button>
+        </div>
+        <br>
+        <button class="btn btn-secondary" style="width:100%;" onclick="openProductDetail('Gloss Eya Beauty','Maquillage',25,'Gloss rose brillant','https://images.unsplash.com/photo-1631214524020-7e18db9e2f5d?auto=format&fit=crop&w=700&q=85')">Voir le produit</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-name="Beauty Care" data-category="Soins">
+      <div class="product-image">
+        <span class="badge new">NOUVEAU</span>
+        <button class="favorite-btn" onclick="toggleFavorite(this,'Beauty Care')">♡</button>
+        <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=700&q=85">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Soins</div>
+        <div class="product-name">Beauty Care</div>
+        <div class="product-description">Une sélection pour prendre soin de votre peau.</div>
+        <div class="rating">★★★★★</div>
+        <div class="product-bottom">
+          <div class="price">30 DT</div>
+          <button class="add-btn" onclick="addToCart('Beauty Care',30,'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=700&q=85')">Ajouter</button>
+        </div>
+        <br>
+        <button class="btn btn-secondary" style="width:100%;" onclick="openProductDetail('Beauty Care','Soins',30,'Une sélection pour prendre soin de votre peau.','https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=700&q=85')">Voir le produit</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-name="Pink Collection" data-category="Maquillage">
+      <div class="product-image">
+        <button class="favorite-btn" onclick="toggleFavorite(this,'Pink Collection')">♡</button>
+        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=700&q=85">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Maquillage</div>
+        <div class="product-name">Pink Collection</div>
+        <div class="product-description">Une collection féminine et élégante.</div>
+        <div class="rating">★★★★★</div>
+        <div class="product-bottom">
+          <div class="price">35 DT</div>
+          <button class="add-btn" onclick="addToCart('Pink Collection',35,'https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=700&q=85')">Ajouter</button>
+        </div>
+        <br>
+        <button class="btn btn-secondary" style="width:100%;" onclick="openProductDetail('Pink Collection','Maquillage',35,'Une collection féminine et élégante.','https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=700&q=85')">Voir le produit</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-name="Beauty Essentials" data-category="Coffrets">
+      <div class="product-image">
+        <span class="badge">POPULAIRE</span>
+        <button class="favorite-btn" onclick="toggleFavorite(this,'Beauty Essentials')">♡</button>
+        <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=700&q=85">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Coffrets</div>
+        <div class="product-name">Beauty Essentials</div>
+        <div class="product-description">Les essentiels beauté réunis dans un coffret.</div>
+        <div class="rating">★★★★★</div>
+        <div class="product-bottom">
+          <div class="price">40 DT</div>
+          <button class="add-btn" onclick="addToCart('Beauty Essentials',40,'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=700&q=85')">Ajouter</button>
+        </div>
+        <br>
+        <button class="btn btn-secondary" style="width:100%;" onclick="openProductDetail('Beauty Essentials','Coffrets',40,'Les essentiels beauté réunis dans un coffret.','https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=700&q=85')">Voir le produit</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-name="Pink Perfume" data-category="Parfums">
+      <div class="product-image">
+        <button class="favorite-btn" onclick="toggleFavorite(this,'Pink Perfume')">♡</button>
+        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=85">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Parfums</div>
+        <div class="product-name">Pink Perfume</div>
+        <div class="product-description">Un parfum délicat et féminin.</div>
+        <div class="rating">★★★★★</div>
+        <div class="product-bottom">
+          <div class="price">45 DT</div>
+          <button class="add-btn" onclick="addToCart('Pink Perfume',45,'https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=85')">Ajouter</button>
+        </div>
+        <br>
+        <button class="btn btn-secondary" style="width:100%;" onclick="openProductDetail('Pink Perfume','Parfums',45,'Un parfum délicat et féminin.','https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=85')">Voir le produit</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-name="Glow Skin" data-category="Soins">
+      <div class="product-image">
+        <button class="favorite-btn" onclick="toggleFavorite(this,'Glow Skin')">♡</button>
+        <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=700&q=85">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Soins</div>
+        <div class="product-name">Glow Skin</div>
+        <div class="product-description">Pour une peau lumineuse et éclatante.</div>
+        <div class="rating">★★★★★</div>
+        <div class="product-bottom">
+          <div class="price">38 DT</div>
+          <button class="add-btn" onclick="addToCart('Glow Skin',38,'https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=700&q=85')">Ajouter</button>
+        </div>
+        <br>
+        <button class="btn btn-secondary" style="width:100%;" onclick="openProductDetail('Glow Skin','Soins',38,'Pour une peau lumineuse et éclatante.','https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?auto=format&fit=crop&w=700&q=85')">Voir le produit</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-name="Pink Gift Box" data-category="Coffrets">
+      <div class="product-image">
+        <button class="favorite-btn" onclick="toggleFavorite(this,'Pink Gift Box')">♡</button>
+        <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Coffrets</div>
+        <div class="product-name">Pink Gift Box</div>
+        <div class="product-description">Un joli coffret à offrir ou à s'offrir.</div>
+        <div class="rating">★★★★★</div>
+        <div class="product-bottom">
+          <div class="price">50 DT</div>
+          <button class="add-btn" onclick="addToCart('Pink Gift Box',50,'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85')">Ajouter</button>
+        </div>
+        <br>
+        <button class="btn btn-secondary" style="width:100%;" onclick="openProductDetail('Pink Gift Box','Coffrets',50,'Un joli coffret à offrir ou à s offrir.','https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=85')">Voir le produit</button>
+      </div>
+    </div>
+
+    <div class="product-card" data-name="Rose Blush" data-category="Maquillage">
+      <div class="product-image">
+        <button class="favorite-btn" onclick="toggleFavorite(this,'Rose Blush')">♡</button>
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=700&q=85">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Maquillage</div>
+        <div class="product-name">Rose Blush</div>
+        <div class="product-description">Une touche de rose pour sublimer votre look.</div>
+        <div class="rating">★★★★★</div>
+        <div class="product-bottom">
+          <div class="price">29 DT</div>
+          <button class="add-btn" onclick="addToCart('Rose Blush',29,'https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=700&q=85')">Ajouter</button>
+        </div>
+        <br>
+        <button class="btn btn-secondary" style="width:100%;" onclick="openProductDetail('Rose Blush','Maquillage',29,'Une touche de rose pour sublimer votre look.','https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=700&q=85')">Voir le produit</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="promo-banner">
+    <h2>✨ -10% sur votre première commande</h2>
+    <p>Profitez de votre réduction avec le code :</p>
+
+    <div class="promo-code">
+      <strong>EYABEAUTY10</strong>
+      <button onclick="copyPromoCode()">Copier</button>
+    </div>
+
+    <div class="countdown">
+      <div class="count-box"><strong id="days">00</strong>Jours</div>
+      <div class="count-box"><strong id="hours">00</strong>Heures</div>
+      <div class="count-box"><strong id="minutes">00</strong>Minutes</div>
+      <div class="count-box"><strong id="seconds">00</strong>Secondes</div>
+    </div>
+  </div>
+</section>
+
+<section id="nouveautes">
+
+  <div class="section-header">
+    <div class="section-label">À découvrir</div>
+    <h2 class="section-title">Nouveautés</h2>
+    <p class="section-text">Découvrez nos dernières sélections.</p>
+  </div>
+
+  <div class="new-grid">
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1631214524020-7e18db9e2f5d?auto=format&fit=crop&w=700&q=85">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Maquillage</div>
+        <div class="product-name">Gloss Eya Beauty</div>
+        <div class="product-bottom">
+          <div class="price">25 DT</div>
+          <button class="add-btn" onclick="addToCart('Gloss Eya Beauty',25,'https://images.unsplash.com/photo-1631214524020-7e18db9e2f5d?auto=format&fit=crop&w=700&q=85')">Ajouter</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=700&q=85">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Maquillage</div>
+        <div class="product-name">Pink Collection</div>
+        <div class="product-bottom">
+          <div class="price">35 DT</div>
+          <button class="add-btn" onclick="addToCart('Pink Collection',35,'https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=700&q=85')">Ajouter</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=700&q=85">
+      </div>
+      <div class="product-info">
+        <div class="product-category">Coffrets</div>
+        <div class="product-name">Beauty Essentials</div>
+        <div class="product-bottom">
+          <div class="price">40 DT</div>
+          <button class="add-btn" onclick="addToCart('Beauty Essentials',40,'https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=700&q=85')">Ajouter</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-label">Nos services</div>
+    <h2 class="section-title">Une expérience pensée pour vous</h2>
+  </div>
+
+  <div class="delivery-grid">
+
+    <div class="delivery-card">
+      <div class="icon">🚚</div>
+      <h3>Livraison en Tunisie</h3>
+      <p>Nous livrons vos commandes partout en Tunisie.</p>
+    </div>
+
+    <div class="delivery-card">
+      <div class="icon">💗</div>
+      <h3>Service personnalisé</h3>
+      <p>Une équipe à votre écoute pour vous accompagner.</p>
+    </div>
+
+    <div class="delivery-card">
+      <div class="icon">🎁</div>
+      <h3>Emballage soigné</h3>
+      <p>Chaque commande est préparée avec attention.</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-label">Paiement</div>
+    <h2 class="section-title">Choisissez votre mode de paiement</h2>
+  </div>
+
+  <div class="delivery-grid">
+
+    <div class="delivery-card">
+      <div class="icon">💵</div>
+      <h3>Paiement à la livraison</h3>
+      <p>Payez directement à la réception de votre commande.</p>
+    </div>
+
+    <div class="delivery-card">
+      <div class="icon">💳</div>
+      <h3>Carte bancaire</h3>
+      <p>Un paiement simple et pratique.</p>
+    </div>
+
+    <div class="delivery-card">
+      <div class="icon">🔐</div>
+      <h3>Paiement en ligne</h3>
+      <p>Payez votre commande en ligne en toute simplicité.</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="avis">
+
+  <div class="section-header">
+    <div class="section-label">Avis clientes</div>
+    <h2 class="section-title">Elles parlent de nous</h2>
+  </div>
+
+  <div class="reviews-grid">
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>Une très belle expérience. Les produits sont magnifiques et la commande est arrivée rapidement.</p>
+      <div class="review-name">Sarah</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>J'ai adoré la présentation et la qualité des produits. Je recommande.</p>
+      <div class="review-name">Mariem</div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p>Le site est simple à utiliser et les produits sont très bien présentés.</p>
+      <div class="review-name">Amira</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="apropos">
+
+  <div class="section-header">
+    <div class="section-label">Notre histoire</div>
+    <h2 class="section-title">À propos de Eya Beauty</h2>
+  </div>
+
+  <div class="about-grid">
+
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=900&q=85">
+    </div>
+
+    <div class="about-content">
+
+      <div class="section-label">
+        Notre histoire
+      </div>
+
+      <h2>
+        Bienvenue chez Eya Beauty
+      </h2>
+
+      <p>
+        Eya Beauty est un univers dédié à la beauté, à la féminité
+        et à l'élégance.
+      </p>
+
+      <p>
+        Nous sélectionnons des produits beauté qui combinent
+        esthétique, simplicité et plaisir.
+      </p>
+
+      <ul class="about-list">
+        <li>✓ Des produits soigneusement sélectionnés</li>
+        <li>✓ Une expérience shopping simple</li>
+        <li>✓ Une présentation élégante</li>
+        <li>✓ Une attention particulière à chaque commande</li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+
+  <div class="section-header">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Parlons beauté</h2>
+    <p class="section-text">Une question ? Une demande ? Écrivez-nous.</p>
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="contact-info">
+
+      <h3>Eya Beauty</h3>
+
+      <div class="contact-item">
+        📧 <strong>Email</strong><br>
+        contact@eyabeauty.tn
+      </div>
+
+      <div class="contact-item">
+        📱 <strong>Téléphone</strong><br>
+        +216 XX XXX XXX
+      </div>
+
+      <div class="contact-item">
+        📍 <strong>Livraison</strong><br>
+        Tunisie
+      </div>
+
+      <div class="contact-item">
+        💗 <strong>Instagram</strong><br>
+        @eyabeauty
+      </div>
+
+    </div>
+
+    <form class="contact-form" onsubmit="sendMessage(event)">
+
+      <div class="form-group">
+        <label>Nom</label>
+        <input type="text" id="contactName" required placeholder="Votre nom">
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="contactEmail" required placeholder="Votre email">
+      </div>
+
+      <div class="form-group">
+        <label>Message</label>
+        <textarea id="contactMessage" required placeholder="Votre message..."></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">
+        Envoyer le message
+      </button>
+
+    </form>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+
+  <div class="footer-logo">Eya Beauty</div>
+
+  <p>Beauté • Élégance • Confiance</p>
+
+  <div class="footer-links">
+    <a href="#accueil">Accueil</a>
+    <a href="#produits">Produits</a>
+    <a href="#categories">Catégories</a>
+    <a href="#apropos">À propos</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <div class="copyright">
+    © 2026 Eya Beauty — Tous droits réservés.
+  </div>
+
+</footer>
+
+<a href="https://wa.me/" target="_blank" class="whatsapp" title="WhatsApp">☎</a>
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+<aside class="cart-panel" id="cartPanel">
+
+  <div class="cart-header">
+    <h2>Votre panier</h2>
+    <button class="close-btn" onclick="closeCart()">✕</button>
+  </div>
+
+  <div class="cart-items" id="cartItems"></div>
+
+  <div class="cart-footer">
+
+    <div class="cart-promo">
+      <input type="text" id="promoInput" placeholder="Code promo">
+      <button onclick="applyPromo()">OK</button>
+    </div>
+
+    <div class="promo-message" id="promoMessage"></div>
+
+    <div class="cart-total">
+      <span>Total</span>
+      <span id="cartTotal">0 DT</span>
+    </div>
+
+    <button class="checkout-btn" onclick="openOrderModal()">
+      Passer la commande
+    </button>
+
+  </div>
+</aside>
+
+<div class="modal" id="productModal" onclick="closeProductModalOutside(event)">
+
+  <div class="modal-box">
+
+    <button class="modal-close" onclick="closeProductDetail()">✕</button>
+
+    <div class="product-detail">
+
+      <div>
+
+        <img id="detailImage" class="detail-main-image" src="" alt="">
+
+        <div class="detail-thumbnails">
+          <img id="thumb1" src="" alt="" onclick="changeDetailImage(this.src)">
+          <img id="thumb2" src="" alt="" onclick="changeDetailImage(this.src)">
+          <img id="thumb3" src="" alt="" onclick="changeDetailImage(this.src)">
+        </div>
+
+      </div>
+
+      <div class="detail-content">
+
+        <div class="product-category" id="detailCategory"></div>
+
+        <h2 id="detailName"></h2>
+
+        <div class="rating">★★★★★</div>
+
+        <div class="detail-price" id="detailPrice"></div>
+
+        <p id="detailDescription"></p>
+
+        <div class="detail-quantity">
+          <button onclick="changeDetailQuantity(-1)">−</button>
+          <span id="detailQuantity">1</span>
+          <button onclick="changeDetailQuantity(1)">+</button>
+        </div>
+
+        <button class="btn btn-primary" style="width:100%;" onclick="addDetailToCart()">
+          Ajouter au panier
+        </button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="orderModal">
+
+  <div class="modal-box">
+
+    <button class="modal-close" onclick="closeOrderModal()">✕</button>
+
+    <div class="order-form">
+
+      <h2>Finaliser votre commande</h2>
+
+      <div class="order-summary" id="orderSummary"></div>
+
+      <form onsubmit="sendOrder(event)">
+
+        <div class="form-group">
+          <label>Nom et prénom *</label>
+          <input type="text" id="orderName" required placeholder="Votre nom">
+        </div>
+
+        <div class="form-group">
+          <label>Téléphone *</label>
+          <input type="tel" id="orderPhone" required placeholder="Votre numéro">
+        </div>
+
+        <div class="form-group">
+          <label>Adresse *</label>
+          <input type="text" id="orderAddress" required placeholder="Votre adresse">
+        </div>
+
+        <div class="form-group">
+          <label>Ville *</label>
+          <input type="text" id="orderCity" required placeholder="Votre ville">
+        </div>
+
+        <div class="form-group">
+
+          <label>Mode de paiement</label>
+
+          <select id="orderPayment">
+            <option value="Paiement à la livraison">Paiement à la livraison</option>
+            <option value="Paiement en ligne">Paiement en ligne</option>
+          </select>
+
+        </div>
+
+        <button class="checkout-btn" type="submit">
+          Confirmer la commande
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("eyaBeautyCart")) || [];
+let favorites = JSON.parse(localStorage.getItem("eyaBeautyFavorites")) || [];
+let activePromo = false;
+let detailProduct = null;
+let detailQuantity = 1;
+
+function toggleMobileMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+function closeMobileMenu(){
+  document.getElementById("navLinks").classList.remove("active");
+}
+
+function showToast(message){
+  const toast=document.getElementById("toast");
+  toast.textContent=message;
+  toast.classList.add("show");
+
+  setTimeout(()=>{
+    toast.classList.remove("show");
+  },2500);
+}
+
+function saveCart(){
+  localStorage.setItem("eyaBeautyCart",JSON.stringify(cart));
+}
+
+function addToCart(name,price,image){
+
+  const existing=cart.find(item=>item.name===name);
+
+  if(existing){
+    existing.quantity++;
+  }else{
+    cart.push({
+      name:name,
+      price:price,
+      image:image,
+      quantity:1
+    });
+  }
+
+  saveCart();
+  updateCart();
+  showToast(name+" ajouté au panier 💗");
+}
+
+function updateCart(){
+
+  const cartItems=document.getElementById("cartItems");
+  const cartCount=document.getElementById("cartCount");
+  const cartTotal=document.getElementById("cartTotal");
+
+  let totalQuantity=0;
+  let total=0;
+
+  cart.forEach(item=>{
+    totalQuantity+=item.quantity;
+    total+=item.price*item.quantity;
+  });
+
+  if(activePromo){
+    total*=.90;
+  }
+
+  cartCount.textContent=totalQuantity;
+  cartTotal.textContent=total.toFixed(2)+" DT";
+
+  if(cart.length===0){
+
+    cartItems.innerHTML=`
+      <div class="cart-empty">
+        <div>🛍️</div>
+        <h3>Votre panier est vide</h3>
+        <p>Découvrez nos produits beauté.</p>
+      </div>
+    `;
+
+    return;
+  }
+
+  cartItems.innerHTML=cart.map((item,index)=>{
+
+    const itemTotal=item.price*item.quantity;
+
+    return`
+      <div class="cart-item">
+
+        <img src="${item.image}" alt="${item.name}">
+
+        <div class="cart-item-info">
+          <h4>${item.name}</h4>
+
+          <div class="cart-item-price">
+            ${itemTotal.toFixed(2)} DT
+          </div>
+
+          <div class="quantity-controls">
+
+            <button onclick="changeQuantity(${index},-1)">−</button>
+
+            <span>${item.quantity}</span>
+
+            <button onclick="changeQuantity(${index},1)">+</button>
+
+          </div>
+        </div>
+
+        <button class="remove-item" onclick="removeFromCart(${index})">
+          🗑
+        </button>
+
+      </div>
+    `;
+
+  }).join("");
+}
+
+function changeQuantity(index,change){
+
+  cart[index].quantity+=change;
+
+  if(cart[index].quantity<=0){
+    cart.splice(index,1);
+  }
+
+  saveCart();
+  updateCart();
+}
+
+function removeFromCart(index){
+
+  const productName=cart[index].name;
+
+  cart.splice(index,1);
+
+  saveCart();
+  updateCart();
+
+  showToast(productName+" supprimé du panier");
+}
+
+function openCart(){
+
+  document.getElementById("cartPanel").classList.add("active");
+  document.getElementById("cartOverlay").classList.add("active");
+
+  updateCart();
+}
+
+function closeCart(){
+
+  document.getElementById("cartPanel").classList.remove("active");
+  document.getElementById("cartOverlay").classList.remove("active");
+}
+
+function searchProducts(){
+
+  const search=document.getElementById("searchInput").value.toLowerCase().trim();
+
+  const products=document.querySelectorAll(".product-card");
+
+  products.forEach(product=>{
+
+    const name=product.dataset.name?.toLowerCase() || "";
+    const category=product.dataset.category?.toLowerCase() || "";
+
+    if(name.includes(search)||category.includes(search)){
+      product.style.display="";
+    }else{
+      product.style.display="none";
+    }
+
+  });
+}
+
+function filterProducts(category,button){
+
+  const products=document.querySelectorAll(".product-card[data-category]");
+
+  products.forEach(product=>{
+
+    if(category==="Tous" || product.dataset.category===category){
+      product.style.display="";
+    }else{
+      product.style.display="none";
+    }
+
+  });
+
+  document.querySelectorAll(".filter-btn").forEach(btn=>{
+    btn.classList.remove("active");
+  });
+
+  if(button){
+    button.classList.add("active");
+  }
+
+  document.getElementById("produits").scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+function toggleFavorite(button,name){
+
+  if(favorites.includes(name)){
+
+    favorites=favorites.filter(item=>item!==name);
+
+    button.classList.remove("active");
+    button.textContent="♡";
+
+    showToast("Retiré des favoris");
+
+  }else{
+
+    favorites.push(name);
+
+    button.classList.add("active");
+    button.textContent="♥";
+
+    showToast("Ajouté aux favoris 💗");
+  }
+
+  localStorage.setItem(
+    "eyaBeautyFavorites",
+    JSON.stringify(favorites)
+  );
+}
+
+function showFavorites(){
+
+  if(favorites.length===0){
+    showToast("Aucun favori pour le moment 💗");
+    return;
+  }
+
+  showToast(
+    favorites.length+" produit(s) dans vos favoris 💗"
+  );
+
+  document.getElementById("produits").scrollIntoView({
+    behavior:"smooth"
+  });
+}
+
+function openProductDetail(name,category,price,description,image){
+
+  detailProduct={
+    name,
+    category,
+    price,
+    description,
+    image
+  };
+
+  detailQuantity=1;
+
+  document.getElementById("detailName").textContent=name;
+  document.getElementById("detailCategory").textContent=category;
+  document.getElementById("detailPrice").textContent=price+" DT";
+  document.getElementById("detailDescription").textContent=description;
+  document.getElementById("detailQuantity").textContent=detailQuantity;
+  document.getElementById("detailImage").src=image;
+  document.getElementById("thumb1").src=image;
+  document.getElementById("thumb2").src=image;
+  document.getElementById("thumb3").src=image;
+
+  document.getElementById("productModal").classList.add("active");
+}
+
+function closeProductDetail(){
+  document.getElementById("productModal").classList.remove("active");
+}
+
+function closeProductModalOutside(event){
+
+  if(event.target===document.getElementById("productModal")){
+    closeProductDetail();
+  }
+}
+
+function changeDetailQuantity(change){
+
+  detailQuantity+=change;
+
+  if(detailQuantity<1){
+    detailQuantity=1;
+  }
+
+  document.getElementById("detailQuantity").textContent=detailQuantity;
+}
+
+function changeDetailImage(image){
+  document.getElementById("detailImage").src=image;
+}
+
+function addDetailToCart(){
+
+  if(!detailProduct)return;
+
+  for(let i=0;i<detailQuantity;i++){
+
+    addToCart(
+      detailProduct.name,
+      detailProduct.price,
+      detailProduct.image
+    );
+  }
+
+  closeProductDetail();
+}
+
+function applyPromo(){
+
+  const input=document
+    .getElementById("promoInput")
+    .value
+    .trim()
+    .toUpperCase();
+
+  const message=document.getElementById("promoMessage");
+
+  if(input==="EYABEAUTY10"){
+
+    activePromo=true;
+
+    message.textContent="✓ Code appliqué : -10%";
+    message.style.color="#4c8b62";
+
+    updateCart();
+
+    showToast("Code promo appliqué 💗");
+
+  }else{
+
+    activePromo=false;
+
+    message.textContent="Code promo invalide.";
+    message.style.color="#a54d68";
+
+    updateCart();
+  }
+}
+
+function copyPromoCode(){
+
+  navigator.clipboard
+    .writeText("EYABEAUTY10")
+    .then(()=>{
+      showToast("Code EYABEAUTY10 copié 💗");
+    })
+    .catch(()=>{
+      showToast("Code : EYABEAUTY10");
+    });
+}
+
+const countdownDate=new Date(
+  Date.now()+3*24*60*60*1000
+);
+
+function updateCountdown(){
+
+  const now=new Date().getTime();
+  const distance=countdownDate.getTime()-now;
+
+  if(distance<=0){
+
+    document.getElementById("days").textContent="00";
+    document.getElementById("hours").textContent="00";
+    document.getElementById("minutes").textContent="00";
+    document.getElementById("seconds").textContent="00";
+
+    return;
+  }
+
+  const days=Math.floor(
+    distance/(1000*60*60*24)
+  );
+
+  const hours=Math.floor(
+    (distance%(1000*60*60*24))/(1000*60*60)
+  );
+
+  const minutes=Math.floor(
+    (distance%(1000*60*60))/(1000*60)
+  );
+
+  const seconds=Math.floor(
+    (distance%(1000*60))/1000
+  );
+
+  document.getElementById("days").textContent=String(days).padStart(2,"0");
+  document.getElementById("hours").textContent=String(hours).padStart(2,"0");
+  document.getElementById("minutes").textContent=String(minutes).padStart(2,"0");
+  document.getElementById("seconds").textContent=String(seconds).padStart(2,"0");
+}
+
+setInterval(updateCountdown,1000);
+updateCountdown();
+
+function openOrderModal(){
+
+  if(cart.length===0){
+
+    showToast("Votre panier est vide 🛍️");
+    return;
+  }
+
+  let subtotal=0;
+
+  cart.forEach(item=>{
+    subtotal+=item.price*item.quantity;
+  });
+
+  let total=subtotal;
+
+  if(activePromo){
+    total=subtotal*.90;
+  }
+
+  const summary=document.getElementById("orderSummary");
+
+  summary.innerHTML=`
+    <strong>Résumé de votre commande</strong>
+    <br><br>
+
+    ${cart.map(item=>`
+      <p>
+        ${item.name}
+        × ${item.quantity}
+        — ${(item.price*item.quantity).toFixed(2)} DT
+      </p>
+    `).join("")}
+
+    <hr style="margin:12px 0;border:none;border-top:1px solid #ead6df;">
+
+    <p>
+      <strong>
+        Total : ${total.toFixed(2)} DT
+      </strong>
+    </p>
+  `;
+
+  document.getElementById("orderModal").classList.add("active");
+}
+
+function closeOrderModal(){
+  document.getElementById("orderModal").classList.remove("active");
+}
+
+function sendOrder(event){
+
+  event.preventDefault();
+
+  if(cart.length===0){
+    showToast("Votre panier est vide.");
+    return;
+  }
+
+  const name=document.getElementById("orderName").value;
+  const phone=document.getElementById("orderPhone").value;
+  const address=document.getElementById("orderAddress").value;
+  const city=document.getElementById("orderCity").value;
+  const payment=document.getElementById("orderPayment").value;
+
+  let total=0;
+  let productsText="";
+
+  cart.forEach(item=>{
+
+    const itemTotal=item.price*item.quantity;
+
+    total+=itemTotal;
+
+    productsText+=
+      `${item.name} x${item.quantity} = ${itemTotal.toFixed(2)} DT\n`;
+  });
+
+  if(activePromo){
+    total*=.90;
+  }
+
+  const subject="Nouvelle commande Eya Beauty";
+
+  const body=
+`Bonjour Eya Beauty,
+
+Je souhaite passer une commande.
+
+Nom : ${name}
+Téléphone : ${phone}
+Adresse : ${address}
+Ville : ${city}
+Paiement : ${payment}
+
+Produits :
+${productsText}
+
+Total : ${total.toFixed(2)} DT
+
+Merci.`;
+
+  window.location.href=
+    "mailto:contact@eyabeauty.tn"+
+    "?subject="+encodeURIComponent(subject)+
+    "&body="+encodeURIComponent(body);
+
+  cart=[];
+
+  saveCart();
+  updateCart();
+  closeOrderModal();
+  closeCart();
+
+  showToast("Commande préparée avec succès 💗");
+}
+
+function sendMessage(event){
+
+  event.preventDefault();
+
+  const name=document.getElementById("contactName").value;
+  const email=document.getElementById("contactEmail").value;
+  const message=document.getElementById("contactMessage").value;
+
+  const subject="Message depuis Eya Beauty";
+
+  const body=
+`Bonjour Eya Beauty,
+
+Nom : ${name}
+Email : ${email}
+
+Message :
+${message}`;
+
+  window.location.href=
+    "mailto:contact@eyabeauty.tn"+
+    "?subject="+encodeURIComponent(subject)+
+    "&body="+encodeURIComponent(body);
+
+  showToast("Votre message est prêt à être envoyé 💗");
+}
+
+function initializeFavorites(){
+
+  document.querySelectorAll(".favorite-btn").forEach(button=>{
+
+    const onclick=button.getAttribute("onclick");
+
+    if(!onclick)return;
+
+    const match=onclick.match(/'([^']+)'/);
+
+    if(!match)return;
+
+    const productName=match[1];
+
+    if(favorites.includes(productName)){
+
+      button.classList.add("active");
+      button.textContent="♥";
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+
+  updateCart();
+  initializeFavorites();
+
+});
+
+</script>
+
+</body>
+</html>
